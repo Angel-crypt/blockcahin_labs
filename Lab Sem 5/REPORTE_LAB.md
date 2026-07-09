@@ -5,7 +5,7 @@
 **Carrera:** Ingeniería en Seguridad Informática y Desarrollo de Software  
 **Curso:** FI42 - Blockchain y Bases de Datos Descentralizadas  
 **Asesor:** Mr. Omar Velazquez Juarez  
-**Fecha:** 14 de julio de 2026
+**Fecha:** 7 de junio de 2026
 
 ---
 
