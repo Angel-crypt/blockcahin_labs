@@ -1,4 +1,5 @@
 # Laboratorio — Identidad Descentralizada (DID)
+
 **Materia:** Blockchain y Bases de Datos Distribuidas | **Carrera:** Ciberseguridad y Desarrollo de Software
 **Tema:** Autenticación soberana y protección de la privacidad del usuario final
 
@@ -109,12 +110,12 @@ Anota **tu** DID completo. Lo usarás durante todo el laboratorio.
 
 Toma tu DID y sepáralo en sus componentes:
 
-| Parte | Valor en TU DID | Qué significa |
-|---|---|---|
-| Esquema | | |
-| Método | | |
-| Red | | |
-| Identificador | | |
+| Parte         | Valor en TU DID | Qué significa |
+| ------------- | --------------- | -------------- |
+| Esquema       |                 |                |
+| Método       |                 |                |
+| Red           |                 |                |
+| Identificador |                 |                |
 
 Responde con base en la salida del script:
 
@@ -458,10 +459,10 @@ Anota los digests que generó **tu** ejecución y el resultado de la verificaci�
 
 Completa esta tabla con tus datos:
 
-| Esquema | Claims revelados | Claims ocultos | Longitud | ¿Verificable? |
-|---|---|---|---|---|
-| VC completa (Parte 4) | | | | |
-| SD-JWT (Parte 6) | | | | |
+| Esquema               | Claims revelados | Claims ocultos | Longitud | ¿Verificable? |
+| --------------------- | ---------------- | -------------- | -------- | -------------- |
+| VC completa (Parte 4) |                  |                |          |                |
+| SD-JWT (Parte 6)      |                  |                |          |                |
 
 Responde:
 
@@ -545,13 +546,13 @@ Con todo lo que implementaste, diseña la solución completa para el bar. Entreg
 
 **8.3 — Análisis de privacidad.** Completa:
 
-| Amenaza | ¿Mitigada por tu diseño? | Mecanismo |
-|---|---|---|
-| El bar conoce el domicilio del cliente | | |
-| El bar altera la credencial | | |
-| Varios bares correlacionan visitas | | |
-| El emisor sabe dónde se usa la credencial | | |
-| Un tercero reutiliza una credencial robada | | |
+| Amenaza                                    | ¿Mitigada por tu diseño? | Mecanismo |
+| ------------------------------------------ | -------------------------- | --------- |
+| El bar conoce el domicilio del cliente     |                            |           |
+| El bar altera la credencial                |                            |           |
+| Varios bares correlacionan visitas         |                            |           |
+| El emisor sabe dónde se usa la credencial |                            |           |
+| Un tercero reutiliza una credencial robada |                            |           |
 
 Para la última fila necesitas investigar: tu implementación **no** vincula la presentación al tenedor. Investiga qué es el **holder binding** en SD-JWT y describe cómo lo agregarías.
 
@@ -562,9 +563,7 @@ Para la última fila necesitas investigar: tu implementación **no** vincula la 
 Responde con base en lo que implementaste y mediste. Las respuestas sin tus valores propios son inválidas.
 
 1. En la Parte 4 anotaste la longitud del JWT completo y en la Parte 6 la del SD-JWT con una sola disclosure. Calcula la diferencia en bytes y el porcentaje. Ahora escala: si el bar procesa 500 clientes por noche y almacena cada presentación por obligación legal durante un año, ¿cuántos MB de datos personales guarda con cada esquema? Con esa cifra, argumenta cuál esquema reduce el riesgo de una filtración y por qué el volumen almacenado es en sí mismo un factor de riesgo.
-
 2. En la Parte 5 comprobaste que una credencial alterada es rechazada, y en la Parte 6 que los claims ocultos siguen comprometidos criptográficamente. Sin embargo, tu implementación no impide que alguien que **robe** la presentación completa la reutilice. Con lo que investigaste sobre holder binding, explica por qué la firma del emisor es necesaria pero no suficiente, y qué segunda firma haría falta.
-
 3. VCDM 2.0 es W3C Recommendation desde mayo de 2025, pero la librería `did-jwt-vc@4.x` que instalaste aún exige el contexto de 2018. Documenta esa brecha: consulta el repositorio de la librería y registra la fecha de su última versión publicada. Con ese dato, argumenta qué riesgo asume un equipo que despliega identidad descentralizada en producción hoy, y qué criterio usarías para decidir entre esperar a que las librerías se alineen al estándar o implementar sobre el estándar directamente.
 
 ---
