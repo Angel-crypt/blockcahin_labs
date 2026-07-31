@@ -1,0 +1,41 @@
+{
+  "consorcio": "RegistroMorosos",
+  "organizaciones": [
+    {
+      "nombre": "BancoAzulMSP",
+      "tipo": "peer",
+      "ca": "ca.bancoazul.example.com",
+      "peers": ["peer0.bancoazul", "peer1.bancoazul"],
+      "rol": "Endorser + Committer"
+    },
+    {
+      "nombre": "BancoRojoMSP",
+      "tipo": "peer",
+      "ca": "ca.bancorojo.example.com",
+      "peers": ["peer0.bancorojo", "peer1.bancorojo"],
+      "rol": "Endorser + Committer"
+    },
+    {
+      "nombre": "BancoVerdeMSP",
+      "tipo": "peer",
+      "ca": "ca.bancoverde.example.com",
+      "peers": ["peer0.bancoverde", "peer1.bancoverde"],
+      "rol": "Endorser + Committer"
+    },
+    {
+      "nombre": "OrdenadorMSP",
+      "tipo": "orderer",
+      "ca": "ca.ordenador.example.com",
+      "nodos": ["orderer0", "orderer1", "orderer2", "orderer3"],
+      "consenso": "BFT (SmartBFT)",
+      "rol": "Ordering Service"
+    }
+  ],
+  "canales": [
+    {
+      "nombre": "canal-morosos",
+      "miembros": ["BancoAzulMSP", "BancoRojoMSP", "BancoVerdeMSP"],
+      "descripcion": "Libro mayor privado del registro de morosos"
+    }
+  ]
+}
